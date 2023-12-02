@@ -1,4 +1,4 @@
-@browserstack
+
 Feature: basic launch browser
 
   @basic

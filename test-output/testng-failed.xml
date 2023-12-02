@@ -6,8 +6,9 @@
       <class name="runner.testNGRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="1"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
           <include name="tearDownClass"/>
+          <include name="extentReportPopUp"/>
         </methods>
       </class> <!-- runner.testNGRunner -->
     </classes>

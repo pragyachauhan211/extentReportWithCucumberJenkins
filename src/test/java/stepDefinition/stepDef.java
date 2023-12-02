@@ -1,7 +1,5 @@
 package stepDefinition;
 
-import java.awt.Desktop;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,20 +11,25 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class stepDef {
-
-	WebDriver driver;
+	 WebDriver driver;
+	
 	public static ExtentTest extentTest;
 	//extentReport1 extentReport1Obj = new extentReport1();
+	
+	public void setUp()
+	{
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\pragy\\OneDrive\\Desktop\\ExtentRepNew\\Driver\\chromedriver.exe");		                                              
+		  driver = new ChromeDriver();
+		  String url = "https://www.browserstack.com/users/sign_in";
+		  driver.get(url);
+	}
 	
 	  @Given("^hit the url$")
 	    public void hit_the_url() throws Throwable {
         
 		  extentReport1.extentReporter.flush(); 
 		  
-		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\pragy\\OneDrive\\Desktop\\New folder (2)\\ExtentReport4\\Driver\\chromedriver.exe");
-		  driver = new ChromeDriver();
-		  String url = "https://www.browserstack.com/users/sign_in";
-		  driver.get(url);
+		  setUp();
 		  extentTest.log(Status.PASS, "Hitting the url");
 			try {
 				Thread.sleep(5000);

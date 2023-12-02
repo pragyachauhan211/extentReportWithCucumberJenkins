@@ -13,7 +13,7 @@ public class extentReport1 {
 	public static int ID = 1;
 	public int counter=1;
 	public static ExtentReports extentReporter;
-	public static File file = new File("C:\\Users\\pragy\\OneDrive\\Desktop\\New folder (2)\\ExtentReport4\\REPORT\\ExtentReport.html");
+	public static File file = new File("C:\\Users\\pragy\\OneDrive\\Desktop\\ExtentRepNew\\REPORT\\ExtentReport.html");
 	static List<Integer> list = new ArrayList<Integer>();	
 	stepDef stepDefObj = new stepDef();
 	
