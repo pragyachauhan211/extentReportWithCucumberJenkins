@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,12 +11,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class stepDef {
+public class stepDefTest {
 	 WebDriver driver;
 	
 	public static ExtentTest extentTest;
 	//extentReport1 extentReport1Obj = new extentReport1();
 	
+	@BeforeMethod
 	public void setUp()
 	{
 		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\pragy\\OneDrive\\Desktop\\ExtentRepNew\\Driver\\chromedriver.exe");		                                              
@@ -27,7 +29,7 @@ public class stepDef {
 	  @Given("^hit the url$")
 	    public void hit_the_url() throws Throwable {
         
-		  extentReport1.extentReporter.flush(); 
+		  extentReport1Test.extentReporter.flush(); 
 		  
 		  setUp();
 		  extentTest.log(Status.PASS, "Hitting the url");
@@ -95,7 +97,7 @@ public class stepDef {
 	        System.out.println("Check more outcomes");
 	        driver.quit();
 	        extentTest.log(Status.PASS, "Browser closed");
-	        extentReport1.extentReporter.flush(); 
+	        extentReport1Test.extentReporter.flush(); 
 	    }
 	    
 	    @Then("^display sign in content$")
@@ -109,20 +111,20 @@ public class stepDef {
 	    
 	    @Given("^To check if error message is showing and for that,$")
 	    public void to_check_if_error_message_is_showing_and_for_that() throws Throwable {
-	    	 extentReport1.generateReport();
+	    	 extentReport1Test.generateReport();
 	          
-			  extentTest = extentReport1.extentReporter
-					  .createTest("Test Case ID: "+extentReport1.ID+"<br>"+"<FONT COLOR='GREY'>"+"<i>To check if error message is showing</i></FONT>");
-			  extentReport1.ID++;
+			  extentTest = extentReport1Test.extentReporter
+					  .createTest("Test Case ID: "+extentReport1Test.ID+"<br>"+"<FONT COLOR='GREY'>"+"<i>To check if error message is showing</i></FONT>");
+			  extentReport1Test.ID++;
 	    }
 	    
 	    @Given("^To check launching of browser and for that,$")
 	    public void to_check_launching_of_browser_and_for_that() throws Throwable {
-	    	extentReport1.generateReport();
+	    	extentReport1Test.generateReport();
 	          
-			  extentTest = extentReport1.extentReporter
-					  .createTest("Test Case ID: "+extentReport1.ID+"<br>"+"<FONT COLOR='GREY'>"+"To check launching of browser and for that,</i></FONT>");
-			  extentReport1.ID++;
+			  extentTest = extentReport1Test.extentReporter
+					  .createTest("Test Case ID: "+extentReport1Test.ID+"<br>"+"<FONT COLOR='GREY'>"+"To check launching of browser and for that,</i></FONT>");
+			  extentReport1Test.ID++;
 	    }
 
 	    

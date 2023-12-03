@@ -1,8 +1,8 @@
 package stepDefinition;
 
-public class hook {
+public class hookTest {
 
-	public hook() {
+	public hookTest() {
 		// TODO Auto-generated constructor stub
 	}
 	
