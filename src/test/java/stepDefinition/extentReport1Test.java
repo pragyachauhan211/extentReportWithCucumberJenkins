@@ -11,7 +11,8 @@ public class extentReport1Test {
 	public static int ID = 1;
 	public int counter=1;
 	public static ExtentReports extentReporter;
-	public static File file = new File("C:\\Users\\pragy\\OneDrive\\Desktop\\ExtentRepNew\\REPORT\\ExtentReport.html");
+	//public static File file = new File("C:\\Users\\pragy\\OneDrive\\Desktop\\ExtentRepNew\\REPORT\\ExtentReport.html");
+	public static File file = new File("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\9DecMavenProject\\REPORT\\ExtentReport.html");
 	static List<Integer> list = new ArrayList<Integer>();	
 	stepDefTest stepDefObj = new stepDefTest();
 	
